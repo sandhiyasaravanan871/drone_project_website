@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Motor Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Drone Motor Selection Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="#motor-selection">Motor Selection</a></li>
+                <li><a href="#weight-calculation">Weight Calculation</a></li>
+                <li><a href="#formulas">Formulas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="motor-selection">
+            <h2>Motor Selection</h2>
+            <!-- Content about motor selection process -->
+        </section>
+        <section id="weight-calculation">
+            <h2>Weight Calculation</h2>
+            <!-- Content about weight calculation -->
+        </section>
+        <section id="formulas">
+            <h2>Formulas</h2>
+            <!-- Content about formulas used -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Drone Project</p>
+    </footer>
+</body>
+</html>
+<section id="motor-selection">
+    <h2>Motor Selection</h2>
+    <p>Choosing the right motor is crucial for ensuring optimal performance and efficiency of your drone. The KV rating of a motor defines the RPM per volt, which directly impacts the drone's speed and stability.</p>
+    <h3>Steps to Determine KV Rating:</h3>
+    <ol>
+        <li>Calculate the total weight of the drone.</li>
+        <li>Determine the thrust required for stable flight.</li>
+        <li>Select propeller size based on the desired thrust and efficiency.</li>
+        <li>Use an online motor calculator to input the weight, propeller size, and battery voltage to get the recommended KV rating.</li>
+    </ol>
+    <p>For our carbon fiber drone, after inputting the necessary parameters, we found that a motor with a <strong>750 KV rating</strong> is optimal.</p>
+</section>
+<section id="weight-calculation">
+    <h2>Weight Calculation</h2>
+    <p>The total weight of the drone is a critical factor in determining the required motor power and KV rating. Below is the breakdown of the weight for our drone:</p>
+    <table>
+        <tr>
+            <th>Component</th>
+            <th>Weight (grams)</th>
+        </tr>
+        <tr>
+            <td>Carbon Fiber Frame</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Battery</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>Motors (x4)</td>
+            <td>220</td>
+        </tr>
+        <tr>
+            <td>Propellers (x4)</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Payload</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <th>Total Weight</th>
+            <th>910 grams</th>
+        </tr>
+    </table>
+    <p>Using this total weight, we calculated the required thrust and chose a motor that provides the necessary performance.</p>
+</section>
+<section id="weight-calculation">
+    <h2>Weight Calculation</h2>
+    <p>Calculate your drone's total weight:</p>
+    <label for="frame-weight">Frame Weight (grams):</label>
+    <input type="number" id="frame-weight" value="200"><br>
+    <label for="battery-weight">Battery Weight (grams):</label>
+    <input type="number" id="battery-weight" value="300"><br>
+    <label for="motor-weight">Motor Weight (grams):</label>
+    <input type="number" id="motor-weight" value="220"><br>
+    <label for="propeller-weight">Propeller Weight (grams):</label>
+    <input type="number" id="propeller-weight" value="40"><br>
+    <label for="payload-weight">Payload Weight (grams):</label>
+    <input type="number" id="payload-weight" value="150"><br>
+    <button onclick="calculateWeight()">Calculate</button>
+    <p id="total-weight">Total Weight: 910 grams</p>
+</section>
+<section id="formulas">
+    <h2>Formulas</h2>
+    <p>Here are the key formulas used in the motor selection process:</p>
+    <ul>
+        <li><strong>Thrust Calculation:</strong> <br>
+            <code>Thrust per Motor = (Total Weight × 2) / Number of Motors</code>
+        </li>
+        <li><strong>Power Calculation:</strong> <br>
+            <code>Power = Voltage × Current</code>
+        </li>
+        <li><strong>KV Rating Relation:</strong> <br>
+            <code>Motor RPM = KV × Voltage</code>
+        </li>
+    </ul>
+</section>
+
